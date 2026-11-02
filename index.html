@@ -3,33 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name Tutoring</title>
-    <meta name="description" content="One-on-one tutoring in math, science and writing." />
+    <title>Your Name | Math and Physics Tutor</title>
+    <meta name="description" content="One-on-one math and physics tutoring for high school and university students." />
+    <meta name="theme-color" content="#0a1633" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="top">
-      <h1>Your Name Tutoring</h1>
-      <p class="lead">One-on-one help that turns “I don’t get it” into “oh, that’s easy.”</p>
-      <a class="btn" href="#contact">Book a free intro session</a>
+    <header class="nav" id="nav">
+      <a class="brand" href="#top">Your Name</a>
+      <button id="menu" class="menu" aria-label="Menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+      <nav id="links" class="links">
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#approach">Approach</a>
+        <a class="cta" href="https://cal.com/simon-del-villar-1lginz">Book a free chat</a>
+      </nav>
     </header>
 
+    <section class="hero" id="top">
+      <canvas id="waves" aria-hidden="true"></canvas>
+      <div class="hero-copy">
+        <p class="tags"><span>High school</span><span>University</span></p>
+        <h1>Math and physics, finally clear.</h1>
+        <p class="lead">One-on-one tutoring that builds real understanding, from Pre-Calculus 11 to first-year university math and physics. Move your mouse across the waves: small changes ripple everywhere, which is how I like to teach.</p>
+        <a class="btn" href="https://cal.com/simon-del-villar-1lginz">Book your session</a>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="track">
+        <span>F = ma</span><span>E = mc²</span><span>∇·E = ρ/ε₀</span><span>e^{iπ} + 1 = 0</span><span>iħ ∂ψ/∂t = Ĥψ</span><span>∫ f′(x) dx = f(x) + C</span><span>PV = nRT</span><span>a² + b² = c²</span>
+        <span>F = ma</span><span>E = mc²</span><span>∇·E = ρ/ε₀</span><span>e^{iπ} + 1 = 0</span><span>iħ ∂ψ/∂t = Ĥψ</span><span>∫ f′(x) dx = f(x) + C</span><span>PV = nRT</span><span>a² + b² = c²</span>
+      </div>
+    </div>
+
     <main>
-      <section aria-labelledby="subjects-h">
-        <h2 id="subjects-h">What I teach</h2>
-        <ul id="subjects" class="subjects"></ul>
+      <section class="block about" id="about">
+        <h2 data-reveal>About me</h2>
+        <div class="about-text" data-reveal>
+          <p>Hi, I’m Simon. I tutor math and physics for high school students and for first-year university students at UBC Okanagan.</p>
+          <p>Most students who come to me aren’t bad at math or physics. They’re missing one idea that everything after it builds on. In our sessions we find that idea, work through it together, and practice until you can do it without me.</p>
+          <p>I care about building confidence, not just getting answers, so expect me to ask you more questions than I hand you solutions.</p>
+        </div>
       </section>
 
-      <section aria-labelledby="contact-h" id="contact">
-        <h2 id="contact-h">Ask about a session</h2>
-        <p>Tell me the subject and grade, and I’ll reply within a day.</p>
-        <div id="contact-form"></div>
+      <section class="block" id="courses">
+        <h2 data-reveal>Courses</h2>
+        <div class="panels">
+          <article class="panel math" data-reveal>
+            <span class="glyph" aria-hidden="true">π</span>
+            <h3>High school</h3>
+            <ul class="course-list">
+              <li>🚀 Physics 11 and 12</li>
+              <li>📈 Pre-Calculus 11 and 12</li>
+              <li>📊 Calculus 12</li>
+              <li>📝 Homework help and exam prep</li>
+              <li>🧠 Building confidence, not just getting answers</li>
+            </ul>
+          </article>
+          <article class="panel phys" data-reveal>
+            <span class="glyph" aria-hidden="true">∇</span>
+            <h3>University</h3>
+            <h4>Mathematics</h4>
+            <ul class="course-list">
+              <li>MATH 100 and 101 (or other equivalent courses)</li>
+              <li>MATH 221 (or other equivalent courses)</li>
+            </ul>
+            <p class="note">For UBCO students: check the <a href="https://okanagan.calendar.ubc.ca/course-descriptions/subject/matho" target="_blank" rel="noopener">MATH_O course codes</a>. If you don’t see your course code listed, send me a message.</p>
+            <h4>Physics</h4>
+            <ul class="course-list">
+              <li>PHYS 111 and 121 (Introductory Physics I and II)</li>
+            </ul>
+            <p class="note">For UBCO students: check the <a href="https://okanagan.calendar.ubc.ca/course-descriptions/subject/physo" target="_blank" rel="noopener">PHYS_O course codes</a>. Currently, my experience is limited to those two courses.</p>
+          </article>
+        </div>
       </section>
-    </main>
 
-    <footer>© <span id="year"></span> Your Name</footer>
+      <section class="block" id="pricing">
+        <h2 data-reveal>Pricing</h2>
+        <div class="price" data-reveal>
+          <p class="price-label"><strong>Single session</strong> <span>(60 min)</span></p>
+          <p class="price-amt">$25</p>
+        </div>
+
+        <h3 class="sub" data-reveal>Booking &amp; Cancellation Policy</h3>
+        <p class="policy-intro" data-reveal>A few simple rules so sessions run smoothly for both of us.</p>
+        <ul class="policies">
+          <li data-reveal><span class="ico" aria-hidden="true">💳</span><p><strong>Payment:</strong> Paid sessions are paid when you book. The free 15-minute chat is always free.</p></li>
+          <li data-reveal><span class="ico" aria-hidden="true">🔁</span><p><strong>Rescheduling:</strong> Free with at least 24 hours’ notice. Use the link in your confirmation email.</p></li>
+          <li data-reveal><span class="ico" aria-hidden="true">❌</span><p><strong>Late cancellations:</strong> Cancelling with less than 24 hours’ notice means the session is forfeited, unless it’s a genuine emergency, in which case just message me.</p></li>
+          <li data-reveal><span class="ico" aria-hidden="true">⏰</span><p><strong>Running late:</strong> I’ll wait up to 10 minutes. Your session still ends at the scheduled time.</p></li>
+          <li data-reveal><span class="ico" aria-hidden="true">👻</span><p><strong>No-shows:</strong> If you don’t show up and don’t message me, the session is forfeited.</p></li>
+          <li data-reveal><span class="ico" aria-hidden="true">🙋</span><p><strong>If I need to cancel:</strong> You’ll get a full refund or a free reschedule, your choice.</p></li>
+          <li data-reveal><span class="ico" aria-hidden="true">💻</span><p><strong>What you’ll need:</strong> A quiet spot, a stable internet connection, and whatever you’re working on (textbook, notes, or problem set).</p></li>
+        </ul>
+      </section>
+
+      <section class="block" id="approach">
+        <h2 data-reveal>How we’ll work</h2>
+        <ol class="steps">
+          <li data-reveal><h3>Free 15-minute chat</h3><p>Fifteen minutes to find where you’re stuck and see if we click.</p></li>
+          <li data-reveal><h3>A plan for your goals</h3><p>An exam, a grade, or a course you’re behind in. We set targets and a weekly schedule.</p></li>
+          <li data-reveal><h3>Weekly sessions</h3><p>Online or in person, with practice problems between sessions and a short progress note.</p></li>
+        </ol>
+      </section>
+
+    <footer class="foot">© <span id="year"></span> Your Name · Math and physics tutoring</footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
