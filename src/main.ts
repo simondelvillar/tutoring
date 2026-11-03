@@ -1,7 +1,7 @@
 import './style.css'
 
 // ---- Edit these ----
-const CONTACT_EMAIL = 'you@example.com'
+const CONTACT_EMAIL = 'simon.joven.delvillar@gmail.com'
 
 // --------------------
 
